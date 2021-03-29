@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AppSocialTour</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="text-center">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
+        <div class="dropdown-menu text-white">
+            <a class="dropdown-item" asp-area="" asp-controller="Menu" asp-action="Historia">Historia</a>
+            <a class="dropdown-item" asp-area="" asp-controller="Menu" asp-action="Novedades">Novedades</a>
+            <a class="dropdown-item" asp-area="" asp-controller="Menu" asp-action="Promociones">Promociones</a>
+        </div>
+            </li>
+            <li class="nav-item text-white">
+                <a class="nav-link" asp-area="" asp-controller="Hoteles" asp-action="indexH">Hospedaje</a>
+            </li>
+            <li class="nav-item text-white">
+                <a class="nav-link" asp-area="" asp-controller="RestBar" asp-action="indexRB">Gastronomia/Bares</a>
+            </li>
+            <li class="nav-item text-white">
+                <a class="nav-link" asp-area="" asp-controller="Social" asp-action="indexS">Turismo Social</a>
+            </li>
+            </ul>
+                <partial name="_LoginPartial" />
+        </div> 
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
