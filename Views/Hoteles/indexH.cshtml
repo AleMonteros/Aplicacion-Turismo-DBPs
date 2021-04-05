@@ -8,63 +8,27 @@
 </div>
 </div>
 </body>
+<form action="@Url.Action("CrearH", "Hotel")">
+    <div>
+        <input type="submit" value="Crear">
+    </div>
+</form>
+
+@model IEnumerable<Hotel>
 <div class="row mb-2">
+  @foreach (var item in Model)
+    {
     <div class="col-md-6">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card card-signin bg-dark">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-white text-center">Hotel</strong>
-          <p class="card-text mb-auto text-white">Direccion</p>
-          <p class="card-text mb-auto text-white">Horario</p>
-          <p class="card-text mb-auto text-white">Datos del hotel etc etc etc.</p>
-          <a href="#" class="text-white">Continuar viendo</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <img src="..." class="card-img" alt="...">
+          <strong class="d-inline-block mb-2 text-white text-center">@Html.DisplayFor(modelItem => item.Nombre)</strong>
+          <p class="card-text mb-auto text-white">Direccion : @Html.DisplayFor(modelItem => item. Direccion)</p>
+          <p class="card-text mb-auto text-white">Horario : @Html.DisplayFor(modelItem => item.Horario)</p>
+          <p class="card-text mb-auto text-white">Telefono : @Html.DisplayFor(modelItem => item.Telefono)</p>
+          <a @Html.ActionLink("Continuar Viendo", "DetallesH", new { id=item.ID }) >
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card card-signin bg-dark">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-white text-center">Hotel</strong>
-          <p class="card-text mb-auto text-white">Direccion</p>
-          <p class="card-text mb-auto text-white">Horario</p>
-          <p class="card-text mb-auto text-white">Datos del hotel etc etc etc.</p>
-          <a href="#" class="text-white">Continuar Viendo</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-        </div>
-      </div>
-    </div>
-</div>
-<div class="row mb-2">
-    <div class="col-md-6">
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card card-signin bg-dark">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-white text-center">Hotel</strong>
-          <p class="card-text mb-auto text-white">Direccion</p>
-          <p class="card-text mb-auto text-white">Horarios</p>
-          <p class="card-text mb-auto text-white">Datos del hotel etc etc etc.</p>
-          <a href="#" class="text-white">Continuar viendo</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card card-signin bg-dark">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-white text-center">Hotel</strong>
-          <p class="card-text mb-auto text-white">Direccion</p>
-          <p class="card-text mb-auto text-white">Horario</p>
-          <p class="card-text mb-auto text-white">Datos del hotel etc etc etc.</p>
-          <a href="#" class="text-white">Continuar Viendo</a>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    }
 </div>
 

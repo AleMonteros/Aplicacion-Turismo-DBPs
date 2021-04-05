@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+using AppSocialTour.Models;
 namespace AppSocialTour.Data
 {
     public class ApplicationDbContext : IdentityDbContext
@@ -12,5 +12,8 @@ namespace AppSocialTour.Data
             : base(options)
         {
         }
+        public DbSet<Hotel> Hotel { get; set; }
+        public DbSet<RestBar> RestBar { get; set; }
+        public DbSet<Social> Social { get; set; }
     }
 }

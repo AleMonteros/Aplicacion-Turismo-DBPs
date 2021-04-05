@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppSocialTour.Models
 {
-    public class Hotel
+    public class RestBar
     {
         [Key]
         public Guid ID { get; set; }
@@ -30,12 +30,5 @@ namespace AppSocialTour.Models
         [Required]
         [MaxLength(1000)]
         public string Datos { get; set; }
-
-
-
-
-
-
-
     }
 }

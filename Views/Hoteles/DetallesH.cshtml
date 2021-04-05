@@ -1,0 +1,62 @@
+@model  AppSocialTour.Models.Hotel
+
+@{
+    ViewData["Title"] = "DetallesH";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Hoteles</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Horario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Horario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SitioWeb)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SitioWeb)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Datos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Datos)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditarH" asp-route-id="@Model.ID">Editar</a>
+    <a asp-action="EliminarH" asp-route-id="@Model.ID">Eliminar</a>
+    <a asp-action="indexH">Volver</a> |
+
+</div>

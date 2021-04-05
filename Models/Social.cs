@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AppSocialTour.Models
 {
-    public class Hotel
+    public class Social
     {
         [Key]
         public Guid ID { get; set; }
@@ -19,17 +19,15 @@ namespace AppSocialTour.Models
         [Required]
         public string Horario { get; set; }
 
-        [Required]
         [MaxLength(15)]
         public string Telefono { get; set; }
 
-        [Required]
         [MaxLength(100)]
         public string SitioWeb { get; set; }
 
         [Required]
         [MaxLength(1000)]
-        public string Datos { get; set; }
+        public string Historia { get; set; }
 
 
 
