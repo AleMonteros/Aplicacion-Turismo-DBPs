@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "DetallesH";
 }
-
+<body class="pantallaH">
 <h1>Detalles</h1>
 
 <div>
@@ -55,8 +55,9 @@
     </dl>
 </div>
 <div>
-    <a asp-action="EditarH" asp-route-id="@Model.ID">Editar</a>
-    <a asp-action="EliminarH" asp-route-id="@Model.ID">Eliminar</a>
-    <a asp-action="indexH">Volver</a> |
+    <a asp-action="EditarH" asp-route-id="@Model.ID" class="text-white">Editar</a> |
+    <a asp-action="EliminarH" asp-route-id="@Model.ID" class="text-white">Eliminar</a> |
+    <a asp-action="indexH" class="text-white">Volver</a> |
 
 </div>
+</body>

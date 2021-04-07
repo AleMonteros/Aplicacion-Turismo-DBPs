@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "EliminarH";
 }
-
+<body class="pantallaH">
 <h1>Eliminar</h1>
 
 <h3>¿Estas seguro de Elimanar el Hotel?</h3>
@@ -52,6 +52,7 @@
     <form asp-action="EliminarH">
         <input type="hidden" asp-for="ID" />
         <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-        <a asp-action="indexH">Volver</a>
+        <a asp-action="indexH" class="text-white">Volver</a>
     </form>
 </div>
+</body>

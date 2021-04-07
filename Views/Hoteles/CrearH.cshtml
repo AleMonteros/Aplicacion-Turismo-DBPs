@@ -1,9 +1,9 @@
-@model Hotel
+@model AppSocialTour.Models.Hotel
 
 @{
-    ViewData["Title"] = "Crear Hotel";
+    ViewData["Title"] = "CrearH";
 }
-
+<body class="pantallaH">
 <h1>Crear</h1>
 
 <h4>Hotel</h4>
@@ -55,8 +55,9 @@
 </div>
 
 <div>
-    <a asp-action="indexH">Volver</a>
+    <a asp-action="indexH" class="text-white">Volver</a>
 </div>
+</body>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

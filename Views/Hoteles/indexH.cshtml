@@ -8,7 +8,7 @@
 </div>
 </div>
 </body>
-<form action="@Url.Action("CrearH", "Hotel")">
+<form action="@Url.Action("CrearH", "Hoteles")">
     <div>
         <input type="submit" value="Crear">
     </div>
@@ -25,6 +25,8 @@
           <p class="card-text mb-auto text-white">Direccion : @Html.DisplayFor(modelItem => item. Direccion)</p>
           <p class="card-text mb-auto text-white">Horario : @Html.DisplayFor(modelItem => item.Horario)</p>
           <p class="card-text mb-auto text-white">Telefono : @Html.DisplayFor(modelItem => item.Telefono)</p>
+          <hr />
+          <p class="card-text text-white" >@Html.DisplayFor(modelItem => item.Datos)</p>
           <a @Html.ActionLink("Continuar Viendo", "DetallesH", new { id=item.ID }) >
         </div>
       </div>

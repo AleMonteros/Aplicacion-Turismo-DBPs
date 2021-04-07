@@ -95,6 +95,10 @@ body {
   background: hsla(271, 92%, 24%, 0.658);
   background: linear-gradient(to right, hsla(288, 50%, 51%, 0.74), hsla(271, 67%, 68%, 0.658));
 }
+.pantallaHistoria{
+  background: hsl(34, 85%, 13%);
+  background: linear-gradient(to right, hsl(34, 80%, 24%), hsl(34, 76%, 35%));
+}
 
 .lateral{
   width: 100%;
