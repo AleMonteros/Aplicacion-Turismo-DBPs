@@ -5,10 +5,15 @@ using System.Threading.Tasks;
 
 namespace AppSocialTour.Enums
 {
-    public enum Roles
+    public static class IdentityEnums
+    {
+        public enum Roles
     {
         UsuarioComun,
-        Administrador,
-        Empresa
+        Historiador,
+        Empresa,
+        SuperAdmin
+    }
+    
     }
 }

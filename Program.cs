@@ -22,7 +22,7 @@ namespace AppSocialTour
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var loggerFactory = services.GetRequiredService<ILoogerFactory>();
+                var loggerFactory = services.GetRequiredService<ILoggerFactory>();
                 try
                 {
                     var context = services.GetRequiredService<ApplicationDbContext>();
@@ -32,7 +32,7 @@ namespace AppSocialTour
                 }
                 catch (Exception ex)
                 {
-                    var logger =loggerFactory.CrearLogger<Program>();
+                    var logger =loggerFactory.CreateLogger<Program>();
                     logger.LogError(ex, "an error occurred seeding the DB.");
                 }
             }

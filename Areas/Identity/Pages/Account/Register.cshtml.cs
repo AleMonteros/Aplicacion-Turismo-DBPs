@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-
+using AppSocialTour.Enums;
 namespace AppSocialTour.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
@@ -81,7 +81,7 @@ namespace AppSocialTour.Areas.Identity.Pages.Account
                     _logger.LogInformation("User created a new account with password.");
                     
                     // agrego Rol UsuarioComun
-                    await _userManager.AddToRolesAsync(user, IdentityEnums.Roles.UsuarioComun.ToString());
+                    await _userManager.AddToRoleAsync(user, IdentityEnums.Roles.UsuarioComun.ToString());
                     
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
