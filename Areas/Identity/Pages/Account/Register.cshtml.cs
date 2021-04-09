@@ -80,8 +80,8 @@ namespace AppSocialTour.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
                     
-                    // agrego Rol UsuarioComun
-                    await _userManager.AddToRoleAsync(user, IdentityEnums.Roles.UsuarioComun.ToString());
+                    // agrego Rol SinDefinir
+                    await _userManager.AddToRoleAsync(user, IdentityEnums.Roles.SinDefinir.ToString());
                     
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));

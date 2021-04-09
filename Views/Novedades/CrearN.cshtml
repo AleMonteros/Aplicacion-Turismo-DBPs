@@ -1,0 +1,51 @@
+@model AppSocialTour.Models.Novedad
+
+@{
+    ViewData["Title"] = "CrearN";
+}
+<body class="pantallaNovedad">
+<div class="card card-signin my-5 text-white bg-dark">
+    <div class="card-body text-white bg-dark">
+    <h1  class="card-title text-center">Generador de Novedades</h1>
+        <hr />
+        <form asp-action="Guardar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID" class="control-label"></label>
+                <input asp-for="ID" class="form-control" />
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Noticia" class="control-label"></label>
+                <input asp-for="Noticia" class="form-control" />
+                <span asp-validation-for="Noticia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lugar" class="control-label"></label>
+                <input asp-for="Lugar" class="form-control" />
+                <span asp-validation-for="Lugar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mensaje" class="control-label"></label>
+                <input asp-for="Mensaje" class="form-control" />
+                <span asp-validation-for="Mensaje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-outline-primary" />
+            </div>
+            <div>
+                <a asp-action="indexN" class="btn btn-outline-primary" type="submit">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace AppSocialTour.Controllers
 {
@@ -30,6 +31,7 @@ namespace AppSocialTour.Controllers
             {
                 var thisViewModel = new UserRolesViewModel();
                 thisViewModel.UserId = user.Id;
+                thisViewModel.UserName = user.UserName;
                 thisViewModel.Email = user.Email;
                 thisViewModel.Roles = await GetUserRoles(user);
                 userRolesViewModel.Add(thisViewModel);
@@ -42,7 +44,7 @@ namespace AppSocialTour.Controllers
             return new List<string>(await _userManager.GetRolesAsync(user));
         }
 
-        [Authorize(Roles = "UsuarioComun")]
+        [Authorize(Roles = "SinDefinir")]
         public async Task<IActionResult> Manage(string userId)
         {
             ViewBag.userId = userId;
@@ -50,7 +52,7 @@ namespace AppSocialTour.Controllers
             if (user == null)
             {
                 ViewBag.ErrorMessage = $"User with Id = {userId} cannot be found";
-                return View("NotFound");
+                return View();
             }
             ViewBag.UserName = user.UserName;
             var model = new List<ManageUserRolesViewModel>();

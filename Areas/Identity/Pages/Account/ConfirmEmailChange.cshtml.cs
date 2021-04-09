@@ -61,4 +61,5 @@ namespace AppSocialTour.Areas.Identity.Pages.Account
             return Page();
         }
     }
+    
 }

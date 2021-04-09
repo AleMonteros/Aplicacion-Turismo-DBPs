@@ -15,5 +15,8 @@ namespace AppSocialTour.Data
         public DbSet<Hotel> Hotel { get; set; }
         public DbSet<RestBar> RestBar { get; set; }
         public DbSet<Social> Social { get; set; }
+        public DbSet<Historia> Historia { get; set; }
+        public DbSet<Novedad> Novedad { get; set; } 
+        public DbSet<Promocion> Promocion { get; set;}
     }
 }

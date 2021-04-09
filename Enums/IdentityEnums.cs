@@ -9,9 +9,10 @@ namespace AppSocialTour.Enums
     {
         public enum Roles
     {
-        UsuarioComun,
+        SinDefinir,
         Historiador,
         Empresa,
+        UsuarioEstandar,
         SuperAdmin
     }
     

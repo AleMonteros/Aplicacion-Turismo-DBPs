@@ -96,8 +96,12 @@ body {
   background: linear-gradient(to right, hsla(288, 50%, 51%, 0.74), hsla(271, 67%, 68%, 0.658));
 }
 .pantallaHistoria{
-  background: hsl(34, 85%, 13%);
-  background: linear-gradient(to right, hsl(34, 80%, 24%), hsl(34, 76%, 35%));
+  background: hsl(34, 90%, 15%);
+  background: linear-gradient(to right, hsl(34, 74%, 31%), hsl(34, 70%, 41%));
+}
+.pantallaNovedad {
+  background: hsl(0, 91%, 45%);
+  background: linear-gradient(to right, hsl(0, 70%, 53%), hsl(0, 60%, 60%));
 }
 
 .lateral{
