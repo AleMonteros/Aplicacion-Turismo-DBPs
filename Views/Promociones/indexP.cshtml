@@ -14,19 +14,20 @@
 
 @model IEnumerable<Promocion>
 
-<div>
+<div class="row mb-2">
 @foreach (var item in Model) 
 {
-    <div class="my-3 border rounded bg-dark">
-    <div class="card mb-3 text-white bg-dark">
-        <h3 class="card-header text-center"> @Html.DisplayFor(modelItem => item.Promo)</h3>
-    <div class="card-body bg-dark text-white ">
-        <h6 class="card-subtitle mb-2 text-muted"> @Html.DisplayFor(modelItem => item.NombreNegocio)</h6>
-        <h6 class="card-subtitle mb-2 text-muted"> @Html.DisplayFor(modelItem => item.Direccion)</h6>
-        <p class="card-text"> @Html.DisplayFor(modelItem => item.DatosPromo)</p>
-        <a class="btn btn-outline-primary" @Html.ActionLink("Ver Promo", "DetallesP", new { id=item.ID }) >    
-    </div>
-    </div>
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card card-signin bg-dark">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-white text-center">@Html.DisplayFor(modelItem => item.Promo)</strong>
+          <p class="card-text mb-auto text-white">@Html.DisplayFor(modelItem => item.TipoNegocio)</p>
+          <p class="card-text mb-auto text-white">@Html.DisplayFor(modelItem => item.NombreNegocio)</p>
+          <hr />
+          <p class="card-text text-white" >Descripcion : @Html.DisplayFor(modelItem => item.DatosPromo)</p>
+          <a @Html.ActionLink("Continuar Viendo", "DetallesP", new { id=item.ID }) >
+        </div>
+      </div>
     </div>
 }
 </div>

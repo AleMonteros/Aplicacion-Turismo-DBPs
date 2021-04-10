@@ -1,9 +1,9 @@
-@model  AppSocialTour.Models.Social
+@model  AppSocialTour.Models.Cultura
 
 @{
-    ViewData["Title"] = "DetallesS";
+    ViewData["Title"] = "DetallesC";
 }
-<body class="pantallaS">
+<body class="pantallaC">
 <form>
 <div class="card card-signin my-5 text-white bg-dark">
     <div class="card-body text-white bg-dark">
@@ -28,26 +28,20 @@
         </dd>
         </div>
         <div>
-        <dt class = "form-group">Telefono</dt>
+        <dt class = "form-group">Historia</dt>
         <dd class = "form group">
-            @Html.DisplayFor(model => model.Telefono)
-        </dd>
-        </div>
-        <div>
-        <dt class = "form-group">Descripcion</dt>
-        <dd class = "form group">
-            @Html.DisplayFor(model => model.Datos)
+            @Html.DisplayFor(model => model.Historia)
         </dd>
         </div>
         <hr >
         <div class="form-group">
-            <input asp-action="EditarS" asp-route-id="@Model.ID" type="submit" class="btn btn-outline-primary" value="Actualizar">
+            <input asp-action="EditarC" asp-route-id="@Model.ID" type="submit" class="btn btn-outline-primary" value="Actualizar">
         </div>
         <div class="form-group">
-            <input asp-action="EliminarS" asp-route-id="@Model.ID" type="submit" class="btn btn-outline-danger" value="Eliminar">
+            <input asp-action="EliminarC" asp-route-id="@Model.ID" type="submit" class="btn btn-outline-danger" value="Eliminar">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-outline-primary" asp-action="indexS" asp-route-id="@Model.ID">Volver</button>
+            <button type="submit" class="btn btn-outline-primary" asp-action="indexC" asp-route-id="@Model.ID">Volver</button>
         </div>
     </div>
 </div>

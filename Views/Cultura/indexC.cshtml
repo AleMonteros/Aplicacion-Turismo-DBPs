@@ -1,20 +1,21 @@
-<body class="pantallaS">
+<body class="pantallaC">
 <div class="jumbotron bg-dark">
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center bg-dark">
   <main role="main" class="inner cover">
-	  <h1 class="display-3 text-white">Vive y Contempla</h1>
-    <p class="lead text-white">Plazas, Museos y muchos mas al alcance de todos.</p>
+	  <h1 class="display-3 text-white">Prueba y Cultiva</h1>
+    <p class="lead text-white">Mostrando la sencillez y elegancia en todo momento.</p>
   </main>
 </div>
 </div>
 </body>
-<form action="@Url.Action("CrearS", "Social")">
+
+<form action="@Url.Action("CrearC", "Cultura")">
     <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block bg-dark text-white">Publicar Turismo Social</button>
+        <button type="submit" class="btn btn-primary btn-block bg-dark text-white">Añadir Publicacion Cultural</button>
     </div>
 </form>
 
-@model IEnumerable<Social>
+@model IEnumerable<Cultura>
 <div class="row mb-2">
   @foreach (var item in Model)
     {
@@ -22,13 +23,12 @@
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card card-signin bg-dark">
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-white text-center">@Html.DisplayFor(modelItem => item.Nombre)</strong>
-          <p class="card-text mb-auto text-white">Categoria : @Html.DisplayFor(modelItem => item.Categoria)</p>
+          <p class="card-text mb-auto text-white">@Html.DisplayFor(modelItem => item.Categoria)</p>
           <p class="card-text mb-auto text-white">Direccion : @Html.DisplayFor(modelItem => item.Direccion)</p>
           <p class="card-text mb-auto text-white">Horario : @Html.DisplayFor(modelItem => item.Horario)</p>
-          <p class="card-text mb-auto text-white">Telefono : @Html.DisplayFor(modelItem => item.Telefono)</p>
           <hr />
-          <p class="card-text text-white" >Descripcion : @Html.DisplayFor(modelItem => item.Datos)</p>
-          <a @Html.ActionLink("Continuar Viendo", "DetallesR", new { id=item.ID }) >
+          <p class="card-text text-white" >Historia : @Html.DisplayFor(modelItem => item.Historia)</p>
+          <a @Html.ActionLink("Continuar Viendo", "DetallesC", new { id=item.ID }) >
         </div>
       </div>
     </div>

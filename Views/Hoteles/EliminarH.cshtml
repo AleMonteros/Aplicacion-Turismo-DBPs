@@ -12,54 +12,54 @@
         <hr /> 
         <h5 class="text-center">¿Quieres Eliminar la Publicacion?</h5>
 
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.NombreEmpresa)
-        </dt>
+        <div>
+        <dt class = "form-group">Nombre del Hospedaje</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.NombreEmpresa)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.TipoEmpresa)
-        </dt>
+        </div>
+        <div>
+        <dt class = "form-group">Tipo de Hospedaje</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.TipoEmpresa)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Representante)
-        </dt>
+        </div>
+        <div>
+        <dt class = "form-group">Representante de la Publicacion</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Representante)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
+        </div>
+        <div>
+        <dt class = "form-group">Direccion</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Direccion)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Horario)
-        </dt>
-        <dd class = "form-group">
+        </div>
+        <div>
+        <dt class = "form-group">Horario</dt>
+        <dd class = "form group">
             @Html.DisplayFor(model => model.Horario)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Telefono)
-        </dt>
-        <dd class = "form-group">
+        </div>
+        <div>
+        <dt class = "form-group">Telefono</dt>
+        <dd class = "form group">
             @Html.DisplayFor(model => model.Telefono)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.SitioWeb)
-        </dt>
+        </div>
+        <div>
+        <dt class = "form-group">Pagina Web del Hospedaje</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.SitioWeb)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Datos)
-        </dt>
-        <dd class = "form-group">
+        </div>
+        <div>
+        <dt class = "form-group">Descripcion del Hospedaje</dt>
+        <dd class = "form group">
             @Html.DisplayFor(model => model.Datos)
         </dd>
+        </div>
     </dl>
     
     <form asp-action="EliminarH">

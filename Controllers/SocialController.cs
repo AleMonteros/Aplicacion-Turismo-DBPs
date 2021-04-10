@@ -31,7 +31,7 @@ namespace AppSocialTour.Controllers
         }
 
         [HttpPost]
-        public IActionResult Guardar([Bind("Nombre,Direccion,Horario,Telefono,SitioWeb,Historia")] Social social)
+        public IActionResult Guardar([Bind("Nombre,Direccion,Horario,Telefono,Datos,Categoria")] Social social)
         {
             social.ID = Guid.NewGuid();
 
@@ -48,7 +48,7 @@ namespace AppSocialTour.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditarS([Bind("ID,Nombre,Direccion,Horario,Telefono,SitioWeb,Historia")] Social social)
+        public IActionResult EditarS([Bind("ID,Nombre,Direccion,Horario,Telefono,Datos,Categoria")] Social social)
         {
             _context.Social.Update(social);
             _context.SaveChanges();

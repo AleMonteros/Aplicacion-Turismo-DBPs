@@ -31,7 +31,7 @@ namespace AppSocialTour.Controllers
         }
 
         [HttpPost]
-        public IActionResult Guardar([Bind("Nombre,Direccion,Horario,Telefono,SitioWeb,Datos")] RestBar restbar)
+        public IActionResult Guardar([Bind("NombreEmpresa,TipoEmpresa,Direccion,Horario,Telefono,SitioWeb,Datos,Representante")] RestBar restbar)
         {
             restbar.ID = Guid.NewGuid();
 
@@ -48,7 +48,7 @@ namespace AppSocialTour.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditarRB([Bind("ID,Nombre,Direccion,Horario,Telefono,SitioWeb,Datos")] RestBar restbar)
+        public IActionResult EditarRB([Bind("ID,NombreEmpresa,TipoEmpresa,Direccion,Horario,Telefono,SitioWeb,Datos,Representante")] RestBar restbar)
         {
             _context.RestBar.Update(restbar);
             _context.SaveChanges();

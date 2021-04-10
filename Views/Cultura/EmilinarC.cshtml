@@ -1,25 +1,25 @@
-@model AppSocialTour.Models.Social
+@model AppSocialTour.Models.Cultura
 
 @{
-    ViewData["Title"] = "EliminarS";
+    ViewData["Title"] = "EliminarC";
 }
-<body class="pantallaS">
+<body class="pantallaC">
 
 <div>
 <div class="card card-signin my-5 text-white bg-dark">
     <div class="card-body text-white bg-dark">
-    <h1  class="card-title text-center">Eliminar Turismo Social</h1>
+    <h1  class="card-title text-center">Eliminar Emprendimiento</h1>
         <hr /> 
         <h5 class="text-center">¿Quieres Eliminar la Publicacion?</h5>
 
         <div>
-        <dt class = "form-group">Nombre del Emprendimiento</dt>
+        <dt class = "form-group">Nombre</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Nombre)
         </dd>
         </div>
         <div>
-        <dt class = "form-group">Tipo de Emprendimiento</dt>
+        <dt class = "form-group">Categoria</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Categoria)
         </dd>
@@ -37,15 +37,9 @@
         </dd>
         </div>
         <div>
-        <dt class = "form-group">Telefono</dt>
+        <dt class = "form-group">Historia</dt>
         <dd class = "form group">
-            @Html.DisplayFor(model => model.Telefono)
-        </dd>
-        </div>
-        <div>
-        <dt class = "form-group">Descripcion del Emprendimiento</dt>
-        <dd class = "form group">
-            @Html.DisplayFor(model => model.Datos)
+            @Html.DisplayFor(model => model.Historia)
         </dd>
         </div>
     </dl>
@@ -56,7 +50,7 @@
         <input type="submit" value="Eliminar" class="btn btn-danger" />
         </div>
         <div class= "form-group">
-        <input asp-action="indexS" type="submit" class="btn btn-outline-primary" value="Volver">
+        <input asp-action="indexC" type="submit" class="btn btn-outline-primary" value="Volver">
         </div>
     </form>
 </div>

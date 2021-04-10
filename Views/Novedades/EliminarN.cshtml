@@ -12,31 +12,30 @@
     <h1  class="card-title text-center">Eliminar Novedad</h1>
         <hr />
         <h5 class="text-center">¿Quieres Eliminar la Novedad?</h5>
-    
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Noticia)
-        </dt>
+        <div>
+        <dt class = "form-group">Noticia</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Noticia)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Lugar)
-        </dt>
+        </div>
+        <div>
+        <dt class = "form-group">Lugar</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Lugar)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
+        </div>
+        <div>
+        <dt class = "form-group">Direccion</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Direccion)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Mensaje)
-        </dt>
-        <dd class = "form-group">
+        </div>
+        <div>
+        <dt class = "form-group">Datos de la Novedad</dt>
+        <dd class = "form group">
             @Html.DisplayFor(model => model.Mensaje)
         </dd>
+        </div>
     </dl>
     
     <form asp-action="EliminarN">

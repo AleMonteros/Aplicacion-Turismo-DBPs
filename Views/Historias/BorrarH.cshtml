@@ -11,37 +11,36 @@
     <h1  class="card-title text-center">Borrar la Historia</h1>
         <hr /> 
         <h5 class="text-center">¿Quieres Eliminar esta carta Historica?</h5>
-
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
+        <div>
+        <dt class = "form-group">Titulo</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Titulo)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Historiador)
-        </dt>
+        </div>
+        <div>
+        <dt class = "form-group">Nombre del Historiador o Autor</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Historiador)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Desarrollo)
-        </dt>
-        <dd class = "form-group">
-            @Html.DisplayFor(model => model.Desarrollo)
-        </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.PaginasReferencia)
-        </dt>
-        <dd class = "form-group">
-            @Html.DisplayFor(model => model.PaginasReferencia)
-        </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.EmailHistoriador)
-        </dt>
+        </div>
+        <div>
+        <dt class = "form-group">Email del Historiador</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.EmailHistoriador)
         </dd>
+        </div>
+        <div>
+        <dt class = "form-group">Paginas que sirvieron de Referencias</dt>
+        <dd class = "form-group">
+            @Html.DisplayFor(model => model.PaginasReferencia)
+        </dd>
+        </div>
+        <div>
+        <dt class = "form-group">Desarrollo de la Hisoria</dt>
+        <dd class = "form group">
+            @Html.DisplayFor(model => model.Desarrollo)
+        </dd>
+        </div>
     </dl>
     
     <form asp-action="BorrarH">

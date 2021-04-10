@@ -22,12 +22,13 @@ namespace AppSocialTour.Models
         [MaxLength(15)]
         public string Telefono { get; set; }
 
-        [MaxLength(100)]
-        public string SitioWeb { get; set; }
+        [Required]
+        [MaxLength(1000)]
+        public string Datos { get; set; }
 
         [Required]
         [MaxLength(1000)]
-        public string Historia { get; set; }
+        public string Categoria { get; set; }
 
 
 
