@@ -4,52 +4,39 @@
     ViewData["Title"] = "DetallesN";
 }
 <body class="pantallaNovedad">
-
 <form>
-<div>
 <div class="card card-signin my-5 text-white bg-dark">
     <div class="card-body text-white bg-dark">
-    <h1  class="card-title text-center">Novedad</h1>
+        <h1  class="card-title text-center">@Html.DisplayFor(model => model.Noticia)</h1>
         <hr />
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.ID)
-        </dt>
-        <dd class = "form-group">
-            @Html.DisplayFor(model => model.ID)
-        </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Noticia)
-        </dt>
-        <dd class = "form-group">
-            @Html.DisplayFor(model => model.Noticia)
-        </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Lugar)
-        </dt>
+        <div>
+        <dt class = "form-group">Lugar</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Lugar)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
+        </div>
+        <div>
+        <dt class = "form-group">Direccion</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.Direccion)
         </dd>
-        <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Mensaje)
-        </dt>
-        <dd class = "form-group">
+        </div>
+        <div>
+        <dt class = "form-group">Datos de la Novedad</dt>
+        <dd class = "form group">
             @Html.DisplayFor(model => model.Mensaje)
         </dd>
-    </dl>
-    <div class="form-group">
-        <input asp-action="EditarN" asp-route-id="@Model.ID" type="submit" class="btn btn-outline-primary" value="Actualizar">
-    </div>
-    <div class="form-group">
-        <input asp-action="EliminarN" asp-route-id="@Model.ID" type="submit" class="btn btn-outline-danger" value="Eliminar">
-    </div>
-    <div class="form-group">
-        <input asp-action="indexN" type="submit" class="btn btn-outline-primary" value="Volver">
+        </div>
+        <hr >
+        <div class="form-group">
+            <input asp-action="EditarN" asp-route-id="@Model.ID" type="submit" class="btn btn-outline-primary" value="Actualizar">
+        </div>
+        <div class="form-group">
+            <input asp-action="EliminarN" asp-route-id="@Model.ID" type="submit" class="btn btn-outline-danger" value="Eliminar">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-primary" asp-action="indexN" asp-route-id="@Model.ID">Volver</button>
+        </div>
     </div>
 </div>
 </form>

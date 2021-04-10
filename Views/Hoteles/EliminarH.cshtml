@@ -10,13 +10,25 @@
     <div class="card-body text-white bg-dark">
     <h1  class="card-title text-center">Eliminar Hotel</h1>
         <hr /> 
-        <h3>¿Estas seguro de Eliminar el Hotel?</h3>
+        <h5 class="text-center">¿Quieres Eliminar la Publicacion?</h5>
 
         <dt class = "form-group">
-            @Html.DisplayNameFor(model => model.Nombre)
+            @Html.DisplayNameFor(model => model.NombreEmpresa)
         </dt>
         <dd class = "form-group">
-            @Html.DisplayFor(model => model.Nombre)
+            @Html.DisplayFor(model => model.NombreEmpresa)
+        </dd>
+        <dt class = "form-group">
+            @Html.DisplayNameFor(model => model.TipoEmpresa)
+        </dt>
+        <dd class = "form-group">
+            @Html.DisplayFor(model => model.TipoEmpresa)
+        </dd>
+        <dt class = "form-group">
+            @Html.DisplayNameFor(model => model.Representante)
+        </dt>
+        <dd class = "form-group">
+            @Html.DisplayFor(model => model.Representante)
         </dd>
         <dt class = "form-group">
             @Html.DisplayNameFor(model => model.Direccion)

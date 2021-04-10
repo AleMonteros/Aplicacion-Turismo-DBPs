@@ -4,47 +4,33 @@
 <form>
 <div class="card card-signin my-5 text-white bg-dark">
     <div class="card-body text-white bg-dark">
-        <h1  class="card-title text-center">Novedad</h1>
+        <h1  class="card-title text-center">@Html.DisplayFor(model => model.Titulo)</h1>
         <hr />
-        <dl class="row"> 
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Titulo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Historiador)
-        </dt>
-        <dd class = "col-sm-10">
+        <div>
+        <dt class = "form-group">Nombre del Historiador o Autor</dt>
+        <dd class = "form-group">
             @Html.DisplayFor(model => model.Historiador)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Desarrollo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Desarrollo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PaginasReferencia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PaginasReferencia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EmailHistoriador)
-        </dt>
-        <dd class = "col-sm-10">
+        </div>
+        <div>
+        <dt class = "form-group">Email del Historiador</dt>
+        <dd class = "form-group">
             @Html.DisplayFor(model => model.EmailHistoriador)
         </dd>
-        </dl>
-
+        </div>
+        <div>
+        <dt class = "form-group">Paginas que sirvieron de Referencias</dt>
+        <dd class = "form-group">
+            @Html.DisplayFor(model => model.PaginasReferencia)
+        </dd>
+        </div>
+        <div>
+        <dt class = "form-group">Desarrollo de la Hisoria</dt>
+        <dd class = "form group">
+            @Html.DisplayFor(model => model.Desarrollo)
+        </dd>
+        </div>
+        <hr >
         <div class="form-group">
             <input asp-action="ModificarH" asp-route-id="@Model.ID" type="submit" class="btn btn-outline-primary" value="Reescribir">
         </div>

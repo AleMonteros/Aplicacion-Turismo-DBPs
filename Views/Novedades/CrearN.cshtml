@@ -11,29 +11,28 @@
         <form asp-action="Guardar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ID" class="control-label"></label>
+                <label asp-for="ID">ID de la Novedad</label>
                 <input asp-for="ID" class="form-control" />
                 <span asp-validation-for="ID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Noticia" class="control-label"></label>
+                <label asp-for="Noticia">Novedad</label>
                 <input asp-for="Noticia" class="form-control" />
                 <span asp-validation-for="Noticia" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Lugar" class="control-label"></label>
+                <label asp-for="Lugar">Nombre del Lugar</label>
                 <input asp-for="Lugar" class="form-control" />
                 <span asp-validation-for="Lugar" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Direccion" class="control-label"></label>
+                <label asp-for="Direccion">Direccion</label>
                 <input asp-for="Direccion" class="form-control" />
                 <span asp-validation-for="Direccion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Mensaje" class="control-label"></label>
-                <input asp-for="Mensaje" class="form-control" />
-                <span asp-validation-for="Mensaje" class="text-danger"></span>
+                <label asp-for="Mensaje">Datos Novedosos</label>
+                <textarea class="form-control" asp-for="Mensaje" rows="3"></textarea>
             </div>
             <div class="form-group">
                 <input type="submit" value="Guardar" class="btn btn-outline-primary" />

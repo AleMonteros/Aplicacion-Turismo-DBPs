@@ -100,8 +100,12 @@ body {
   background: linear-gradient(to right, hsl(34, 74%, 31%), hsl(34, 70%, 41%));
 }
 .pantallaNovedad {
-  background: hsl(0, 91%, 45%);
-  background: linear-gradient(to right, hsl(0, 70%, 53%), hsl(0, 60%, 60%));
+  background: hsl(0, 86%, 23%);
+  background: linear-gradient(to right, hsl(0, 59%, 37%), hsl(0, 37%, 44%));
+}
+.pantallaP {
+  background: hsl(189, 92%, 20%);
+  background: linear-gradient(to right, hsl(189, 55%, 46%), hsl(189, 76%, 69%));
 }
 
 .lateral{

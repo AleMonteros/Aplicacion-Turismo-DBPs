@@ -14,7 +14,7 @@ namespace AppSocialTour.Models
 
         [Required]
         [MaxLength(500)]
-        public string TipoNgeocio { get; set; }
+        public string TipoNegocio { get; set; }
 
         [Required]
         [MaxLength(500)]

@@ -14,19 +14,20 @@
 
 @model IEnumerable<Historia>
 
-<div>
+<div class="row mb-2">
 @foreach (var item in Model) 
 {
-    <div class="card card-signin my-5 text-white bg-dark border rounded">
-    <div class="card-body text-white bg-dark">
-        <h3 class="card-header border rounded text-center"> @Html.DisplayFor(modelItem => item.Titulo)</h3>
-        <hr>
-    <div class="card-body bg-dark text-white border rounded">
-        <h6 class="card-subtitle mb-2 text-muted"> Historiador : @Html.DisplayFor(modelItem => item.Historiador)</h6>
-        <p class="card-text"> @Html.DisplayFor(modelItem => item.Desarrollo)</p>
-        <a class="btn btn-outline-primary" @Html.ActionLink("Continuar Leyendo", "MostrarH", new { id=item.ID })></a>
-    </div>
-    </div>
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card card-signin bg-dark">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-white text-center">@Html.DisplayFor(modelItem => item.Titulo)</strong>
+          <p class="card-text mb-auto text-white">@Html.DisplayFor(modelItem => item.Historiador)</p>
+          <p class="card-text mb-auto text-white">Email del Historiador : @Html.DisplayFor(modelItem => item.EmailHistoriador)</p>
+          <hr />
+          <p class="card-text text-white" >Desarrollo : @Html.DisplayFor(modelItem => item.Desarrollo)</p>
+          <a @Html.ActionLink("Continuar Leyendo", "MostrarH", new { id=item.ID }) >
+        </div>
+      </div>
     </div>
 }
 </div>

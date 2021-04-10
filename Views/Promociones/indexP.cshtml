@@ -1,0 +1,32 @@
+<body class="pantallaP">
+    <div class="jumbotron bg-dark">
+    <h1 class="display-3 text-white">Hello, world!</h1>
+        <hr class="my-4">
+        <p class="text-white">It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    </div>
+</body>
+
+<form action="@Url.Action("CrearP", "Promociones")">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block bg-dark text-white">Añadir una Promocion</button>
+    </div>
+</form>
+
+@model IEnumerable<Promocion>
+
+<div>
+@foreach (var item in Model) 
+{
+    <div class="my-3 border rounded bg-dark">
+    <div class="card mb-3 text-white bg-dark">
+        <h3 class="card-header text-center"> @Html.DisplayFor(modelItem => item.Promo)</h3>
+    <div class="card-body bg-dark text-white ">
+        <h6 class="card-subtitle mb-2 text-muted"> @Html.DisplayFor(modelItem => item.NombreNegocio)</h6>
+        <h6 class="card-subtitle mb-2 text-muted"> @Html.DisplayFor(modelItem => item.Direccion)</h6>
+        <p class="card-text"> @Html.DisplayFor(modelItem => item.DatosPromo)</p>
+        <a class="btn btn-outline-primary" @Html.ActionLink("Ver Promo", "DetallesP", new { id=item.ID }) >    
+    </div>
+    </div>
+    </div>
+}
+</div>

@@ -10,7 +10,15 @@ namespace AppSocialTour.Models
 
         [Required]
         [MaxLength(50)]
-        public string Nombre { get; set; }
+        public string NombreEmpresa { get; set; }
+        
+        [Required]
+        [MaxLength(50)]
+        public string Representante { get; set; }
+        
+        [Required]
+        [MaxLength(50)]
+        public string TipoEmpresa { get; set; }
 
         [Required]
         [MaxLength(50)]
@@ -23,7 +31,6 @@ namespace AppSocialTour.Models
         [MaxLength(15)]
         public string Telefono { get; set; }
 
-        [Required]
         [MaxLength(100)]
         public string SitioWeb { get; set; }
 

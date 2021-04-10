@@ -9,8 +9,8 @@
 </div>
 </body>
 <form action="@Url.Action("CrearH", "Hoteles")">
-    <div>
-        <input type="submit" value="Crear">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block bg-dark text-white">Publicar Hospedaje</button>
     </div>
 </form>
 
@@ -21,12 +21,13 @@
     <div class="col-md-6">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative card card-signin bg-dark">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-white text-center">@Html.DisplayFor(modelItem => item.Nombre)</strong>
+          <strong class="d-inline-block mb-2 text-white text-center">@Html.DisplayFor(modelItem => item.NombreEmpresa)</strong>
+          <p class="card-text mb-auto text-white">Tipo de Hospedaje : @Html.DisplayFor(modelItem => item.TipoEmpresa)</p>
           <p class="card-text mb-auto text-white">Direccion : @Html.DisplayFor(modelItem => item.Direccion)</p>
           <p class="card-text mb-auto text-white">Horario : @Html.DisplayFor(modelItem => item.Horario)</p>
           <p class="card-text mb-auto text-white">Telefono : @Html.DisplayFor(modelItem => item.Telefono)</p>
           <hr />
-          <p class="card-text text-white" >@Html.DisplayFor(modelItem => item.Datos)</p>
+          <p class="card-text text-white" >Descripcion : @Html.DisplayFor(modelItem => item.Datos)</p>
           <a @Html.ActionLink("Continuar Viendo", "DetallesH", new { id=item.ID }) >
         </div>
       </div>

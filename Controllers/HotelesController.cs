@@ -31,7 +31,7 @@ namespace AppSocialTour.Controllers
         }
 
         [HttpPost]
-        public IActionResult Guardar([Bind("Nombre,Direccion,Horario,Telefono,SitioWeb,Datos")] Hotel hotel)
+        public IActionResult Guardar([Bind("NombreEmpresa,TipoEmpresa,Direccion,Horario,Telefono,SitioWeb,Datos,Representante")] Hotel hotel)
         {
             hotel.ID = Guid.NewGuid();
 
@@ -48,7 +48,7 @@ namespace AppSocialTour.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditarH([Bind("ID,Nombre,Direccion,Horario,Telefono,SitioWeb,Datos")] Hotel hotel)
+        public IActionResult EditarH([Bind("ID,NombreEmpresa,TipoEmpresa,Direccion,Horario,Telefono,SitioWeb,Datos,Representante")] Hotel hotel)
         {
             _context.Hotel.Update(hotel);
             _context.SaveChanges();

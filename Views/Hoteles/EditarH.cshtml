@@ -3,59 +3,66 @@
 @{
     ViewData["Title"] = "EditarH";
 }
+
 <body class="pantallaH">
-<h1>Editar</h1>
-
-<h4>Hoteles</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="EditarH" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="card card-signin my-5 text-white bg-dark">
+    <div class="card-body text-white bg-dark">
+    <h1  class="card-title text-center">Actualizar la Publicacion</h1>
+    <hr />
+    <form asp-action="EditarH" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="ID">ID del Hospedaje</label>
+            <input asp-for="ID" class="form-control" />
+            <span asp-validation-for="ID" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NombreEmpresa">Nombre del Hospedaje</label>
+            <input asp-for="NombreEmpresa" class="form-control" />
+            <span asp-validation-for="NombreEmpresa" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="TipoEmpresa">Tipo de Hospedaje</label>
+            <input asp-for="TipoEmpresa" class="form-control" />
+            <span asp-validation-for="TipoEmpresa" class="text-danger"></span>
+        </div>
             <div class="form-group">
-                <label asp-for="ID" class="control-label"></label>
-                <input asp-for="ID" class="form-control" />
-                <span asp-validation-for="ID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Direccion" class="control-label"></label>
-                <input asp-for="Direccion" class="form-control" />
-                <span asp-validation-for="Direccion" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Horario" class="control-label"></label>
-                <input asp-for="Horario" class="form-control" />
-                <span asp-validation-for="Horario" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Telefono" class="control-label"></label>
-                <input asp-for="Telefono" class="form-control" />
-                <span asp-validation-for="Telefono" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SitioWeb" class="control-label"></label>
-                <input asp-for="SitioWeb" class="form-control" />
-                <span asp-validation-for="SitioWeb" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Datos" class="control-label"></label>
-                <input asp-for="Datos" class="form-control" />
-                <span asp-validation-for="Datos" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
-            </div>
-        </form>
+            <label asp-for="Representante">Representante (Nombre y Apellido)</label>
+            <input asp-for="Representante" class="form-control" />
+            <span asp-validation-for="Representante" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Direccion">Direccion</label>
+            <input asp-for="Direccion" class="form-control" />
+            <span asp-validation-for="Direccion" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Horario">Horario</label>
+            <input asp-for="Horario" class="form-control" />
+            <span asp-validation-for="Horario" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Telefono">Telefono</label>
+            <input asp-for="Telefono" class="form-control" />
+            <span asp-validation-for="Telefono" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="SitioWeb">Pagina Web del Hospedaje</label>
+            <input asp-for="SitioWeb" class="form-control" />
+            <span asp-validation-for="SitioWeb" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Datos">Descripcion del Hospedaje</label>
+            <textarea class="form-control" asp-for="Datos" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Guardar" class="btn btn-outline-primary" />
+        </div>
+        <div>
+            <a asp-action="indexH" class="btn btn-outline-primary" type="submit">Volver</a>
+        </div>
+    </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="indexH" class="text-white">Volver</a>
 </div>
 </body>
 
