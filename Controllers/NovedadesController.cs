@@ -44,7 +44,7 @@ namespace AppSocialTour.Controllers
         public IActionResult EditarN(Guid Id)
         {
             Novedad novedadEditar = _context.Novedad.Find(Id);
-            return View ("EditarN");
+            return View ("DetallesN");
         }
 
         [HttpPost]

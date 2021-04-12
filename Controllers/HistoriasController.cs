@@ -44,7 +44,7 @@ namespace AppSocialTour.Controllers
         public IActionResult ModificarH(Guid Id)
         {
             Historia historiaModificar = _context.Historia.Find(Id);
-            return View ("ModificarH");
+            return View ("MostrarH");
         }
 
         [HttpPost]

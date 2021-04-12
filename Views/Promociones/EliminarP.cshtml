@@ -11,7 +11,8 @@
     <h1  class="card-title text-center">Eliminar Promocion</h1>
         <hr /> 
         <h5 class="text-center">¿Quieres Eliminar la Promocion?</h5>
-
+        
+        <div>
         <dt class = "form-group">ID de la Promocion</dt>
         <dd class = "form-group">
             @Html.DisplayFor(model => model.ID)
@@ -35,7 +36,7 @@
         </div>
         <div>
         <dt class = "form-group">Direccion</dt>
-        <dd class = "for-group">
+        <dd class = "form-group">
             @Html.DisplayFor(model => model.Direccion)
         </dd>
         </div>
@@ -47,7 +48,7 @@
         </div>
     </dl>
     
-    <form asp-action="EliminarH">
+    <form asp-action="EliminarP">
         <div class="form-group">
         <input type="hidden" asp-for="ID" />
         <input type="submit" value="Eliminar" class="btn btn-danger" />

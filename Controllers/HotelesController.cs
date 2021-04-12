@@ -44,7 +44,7 @@ namespace AppSocialTour.Controllers
         public IActionResult EditarH(Guid Id)
         {
             Hotel hotelEditar = _context.Hotel.Find(Id);
-            return View ("EditarH");
+            return View ("DetallesH");
         }
 
         [HttpPost]

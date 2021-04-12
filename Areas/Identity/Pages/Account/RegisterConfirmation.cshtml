@@ -4,18 +4,31 @@
     ViewData["Title"] = "Confirmacion de Registro";
 }
 
-<h1>@ViewData["Title"]</h1>
-@{
-    if (@Model.DisplayConfirmAccountLink)
-    {
-<p>
-    Antes de comenzar el pedidos que verifique la autenticidad del Correo Electronico ingresado , presione en <a id="confirm-link" href="@Model.EmailConfirmationUrl">Confirmar el Correo Electronico</a> para continuar.
-</p>
-    }
-    else
-    {
-<p>
-        Revise su Correo Electronico para confirmar su cuenta.
-</p>
-    }
-}
+<body class="pantalla">
+<div class="container">
+<div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+            <div class="card-body">
+            <h1  class="card-title text-center">Confirmacion de Registro</h1>
+            <hr />
+        @{
+            if (@Model.DisplayConfirmAccountLink)
+            {
+            <p class="text-center">
+                Antes de comenzar le pedidos que verifique la autenticidad del Correo Electronico ingresado , presione en <a id="confirm-link" href="@Model.EmailConfirmationUrl">Confirmar el Correo Electronico</a> para continuar.
+            </p>
+            }
+            else
+            {
+            <p>
+            Revise su Correo Electronico para confirmar su cuenta.
+            </p>
+            }
+        }
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>

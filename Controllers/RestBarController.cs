@@ -44,7 +44,7 @@ namespace AppSocialTour.Controllers
         public IActionResult EditarRB(Guid Id)
         {
             RestBar restbarEditar = _context.RestBar.Find(Id);
-            return View ("EditarRB");
+            return View ("DetallesRB");
         }
 
         [HttpPost]

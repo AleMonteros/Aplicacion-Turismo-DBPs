@@ -107,7 +107,10 @@ body {
   background: hsl(189, 92%, 20%);
   background: linear-gradient(to right, hsl(189, 55%, 46%), hsl(189, 76%, 69%));
 }
-
+.pantallaC {
+  background: hsl(59, 84%, 34%);
+  background: linear-gradient(to right, hsl(59, 63%, 54%), hsl(59, 47%, 60%));
+}
 .lateral{
   width: 100%;
 }
